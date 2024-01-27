@@ -28,7 +28,5 @@ export async function GET() {
     await prisma.$disconnect();
   }
 
-  console.log(user);
-
-  return NextResponse.json(`Hello ${user?.username}`);
+  return NextResponse.json(user);
 }

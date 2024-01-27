@@ -19,13 +19,23 @@ async function getData() {
 }
 
 export default async function Home() {
-  const data = await getData();
-
-  console.log({"why wont you update": data});
+  const {
+    username,
+    handle,
+    email,
+    followers,
+    following,
+    posts,
+    likes,
+    chatRooms,
+    messages,
+  } = await getData();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Please change for the love of god {data}
+    <main className="flex min-h-screen flex-col items-center p-24">
+      <h1>Username: {username}</h1>
+      <h1>Handle: {handle}</h1>
+      <h1>Email: {email}</h1>
     </main>
   );
 }
