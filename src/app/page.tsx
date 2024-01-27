@@ -1,5 +1,7 @@
+import { URL } from "@/constants";
+
 async function getData() {
-  const response = await fetch("http://localhost:3000/api", {
+  const response = await fetch(URL + "/api", {
     cache: "no-store",
     headers: {
       Accept: "application/json",
