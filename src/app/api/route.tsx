@@ -22,6 +22,8 @@ export async function GET() {
         messages: true,
       },
     });
+
+    console.log(user);
   } catch (error) {
     console.error(error);
   } finally {
