@@ -1,3 +1,5 @@
+export const revalidate = 1;
+export const dynamic = "force-dynamic";
 async function getData() {
   const response = await fetch(process.env.URL + "/api", {
     cache: "no-cache",
@@ -7,6 +9,8 @@ async function getData() {
     },
   });
 
+  console.log(response);
+
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -14,12 +18,10 @@ async function getData() {
   return response.json();
 }
 
-export const revalidate = 1;
-export const dynamic = "force-dynamic";
 export default async function Home() {
   const data = await getData();
 
-  console.log(data);
+  console.log({ "why wont you update": data });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
