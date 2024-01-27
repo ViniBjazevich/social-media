@@ -1,7 +1,5 @@
-import { URL } from "@/constants";
-
 async function getData() {
-  const response = await fetch(URL + "/api", {
+  const response = await fetch(process.env.URL + "/api", {
     cache: "no-store",
     headers: {
       Accept: "application/json",
@@ -18,6 +16,8 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
+
+  console.log(data);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
