@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 async function getData() {
   const response = await fetch(process.env.URL + "/api", {
     cache: "no-store",
