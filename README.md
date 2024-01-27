@@ -18,6 +18,12 @@ This is a example of how to create a route in next.js 14. To test the route send
 Helpful video: https://www.youtube.com/watch?v=gEB3ckYeZF4
 
 
-
-
 Good video explaining next.js concepts: https://www.youtube.com/watch?v=vwSlYG7hFk0
+
+## Prisma
+- Create prisma folder in root directory with schema.prisma file
+- Create a .env file with database credentials
+
+Push changes to database: `npx prisma db push`
+
+Open prisma studio: `npx prisma studio`
